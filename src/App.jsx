@@ -1,3 +1,5 @@
+import './styles/App.scss';
+
 import { Song, Player } from './components';
 
 function App() {
