@@ -2,6 +2,8 @@ import './styles/App.scss';
 
 import { Song, Player } from './components';
 
+import data from './util';
+
 function App() {
   return (
     <div>
