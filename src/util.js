@@ -4,7 +4,7 @@ const chillHop = () => {
   return [
     {
       id: uuidv4(),
-      isActive: false,
+      isActive: true,
       name: 'Oasis',
       artist: 'Makzo',
       audio: 'https://mp3.chillhop.com/serve.php/?mp3=11768',
