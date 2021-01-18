@@ -24,15 +24,15 @@
     // TODO: change color after
     svg {
       margin: 1rem 1rem 0 auto;
-      font-size: 2.5rem;
-      color: rgb(48, 48, 48);
+      font-size: 2.3rem;
+      color: #1b1b1b;
       padding: 0.2rem;
 
       transition: all 0.3s ease-in-out;
 
       &:hover {
-        transform: scale(1.1);
         cursor: pointer;
+        transform: scale(1.1);
       }
 
       &:active {

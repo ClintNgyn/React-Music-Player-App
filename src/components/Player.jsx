@@ -8,8 +8,12 @@ import {
 
 const Player = ({
   audioRef,
+  songs,
+  setSongs,
   songInfo,
   setSongInfo,
+  currentSong: { id },
+  setCurrentSong,
   isPlaying,
   setIsPlaying,
 }) => {
@@ -22,18 +26,34 @@ const Player = ({
 
   //Event Handlers
   const playSongHandler = () => {
-    if (isPlaying) {
-      audioRef.current.pause();
-    } else {
-      audioRef.current.play();
-    }
-
+    isPlaying ? audioRef.current.pause() : audioRef.current.play();
     setIsPlaying(!isPlaying);
   };
 
   const sliderHandler = ({ target: { value } }) => {
     audioRef.current.currentTime = value;
     setSongInfo({ currentTime: value, duration });
+  };
+
+  const skipTrackHandler = (dir) => {
+    let currIdx = songs.findIndex((song) => song.id === id);
+    currIdx =
+      dir === 'back'
+        ? currIdx - 1 < 0
+          ? songs.length - 1
+          : currIdx - 1
+        : (currIdx + 1) % songs.length;
+
+    setCurrentSong(songs[currIdx]);
+
+    setSongs(
+      songs.map((song) => {
+        return {
+          ...song,
+          isActive: song.id === songs[currIdx].id,
+        };
+      })
+    );
   };
 
   // Variables
@@ -56,7 +76,12 @@ const Player = ({
       </div>
 
       <div className='play-control'>
-        <FontAwesomeIcon size='3x' className='skip-back' icon={faAngleLeft} />
+        <FontAwesomeIcon
+          size='3x'
+          className='skip-back'
+          icon={faAngleLeft}
+          onClick={() => skipTrackHandler('back')}
+        />
 
         <FontAwesomeIcon
           size='2x'
@@ -69,6 +94,7 @@ const Player = ({
           size='3x'
           className='skip-forward'
           icon={faAngleRight}
+          onClick={() => skipTrackHandler('forward')}
         />
       </div>
     </div>

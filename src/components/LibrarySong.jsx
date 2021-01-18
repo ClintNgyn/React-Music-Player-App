@@ -10,7 +10,7 @@ const LibrarySong = ({
   const { id, cover, name, artist, isActive } = song;
 
   // Events Handler
-  const songSelectHandler = () => {
+  const songSelectHandler = async () => {
     setCurrentSong(song);
 
     //set active song highlight
@@ -21,11 +21,10 @@ const LibrarySong = ({
     });
 
     // Wait for audio to load
-    isPlaying &&
-      (async () => {
-        await audioRef.current.play();
-        audioRef.current.play();
-      })();
+    if (isPlaying) {
+      await audioRef.current.play();
+      audioRef.current.play();
+    }
   };
 
   return (

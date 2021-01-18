@@ -31,8 +31,12 @@ function App() {
 
       <Player
         audioRef={audioRef}
+        songs={songs}
+        setSongs={setSongs}
         songInfo={songInfo}
         setSongInfo={setSongInfo}
+        currentSong={currentSong}
+        setCurrentSong={setCurrentSong}
         isPlaying={isPlaying}
         setIsPlaying={setIsPlaying}
         onClick={() => setLibraryStatus(false)}
