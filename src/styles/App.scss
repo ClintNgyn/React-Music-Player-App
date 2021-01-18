@@ -1,7 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(155, 155, 155, 0.5);
+  border: transparent;
+  border-radius: 25px;
+}
+
+body {
+  font-family: "Lato", sans-serif;
 }
 
 h1,
@@ -10,5 +32,12 @@ h3 {
   color: rgb(60, 60, 60);
 }
 
+h3,
+h4 {
+  font-weight: 400;
+  color: rgb(100, 100, 100);
+}
+
 @import "./Player";
 @import "./Song";
+@import "./Library";
