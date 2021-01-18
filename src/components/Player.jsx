@@ -1,8 +1,9 @@
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState } from 'react';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faPlay,
+  faPause,
   faAngleLeft,
   faAngleRight,
 } from '@fortawesome/free-solid-svg-icons';
@@ -24,6 +25,10 @@ const Player = ({ currentSong: { audio }, isPlaying, setIsPlaying }) => {
   };
 
   //Event Handlers
+  const timeUpdateHandler = ({ target: { currentTime, duration } }) => {
+    setSongInfo({ currentTime, duration });
+  };
+
   const playSongHandler = () => {
     if (isPlaying) {
       audioRef.current.pause();
@@ -34,9 +39,9 @@ const Player = ({ currentSong: { audio }, isPlaying, setIsPlaying }) => {
     setIsPlaying(!isPlaying);
   };
 
-  const timeUpdateHandler = (evt) => {
-    const { currentTime, duration } = evt.target;
-    setSongInfo({ currentTime, duration });
+  const sliderHandler = ({ target: { value } }) => {
+    audioRef.current.currentTime = value;
+    setSongInfo({ currentTime: value, duration });
   };
 
   // Variables
@@ -47,23 +52,29 @@ const Player = ({ currentSong: { audio }, isPlaying, setIsPlaying }) => {
       <div className='time-control'>
         <p>{timeBuilder(currentTime)}</p>
 
-        <input type='range' />
+        <input
+          type='range'
+          min='0'
+          max={duration}
+          value={currentTime}
+          onChange={sliderHandler}
+        />
 
         <p>{timeBuilder(duration)}</p>
       </div>
 
       <div className='play-control'>
-        <FontAwesomeIcon size='2x' className='skip-back' icon={faAngleLeft} />
+        <FontAwesomeIcon size='3x' className='skip-back' icon={faAngleLeft} />
 
         <FontAwesomeIcon
           size='2x'
           className='play'
-          icon={faPlay}
+          icon={isPlaying ? faPause : faPlay}
           onClick={playSongHandler}
         />
 
         <FontAwesomeIcon
-          size='2x'
+          size='3x'
           className='skip-forward'
           icon={faAngleRight}
         />
