@@ -8,7 +8,7 @@ const chillHop = () => {
       name: 'Oasis',
       artist: 'Makzo',
       audio: 'https://mp3.chillhop.com/serve.php/?mp3=11768',
-      color: ['#485E9A', '#FEE87E'],
+      color: ['#606FAA', '##E8866E'],
       cover:
         'https://chillhop.com/wp-content/uploads/2020/11/f78c39b4bb6313ddd0354bef896c591bfb490ff8.jpg',
     },
@@ -19,7 +19,7 @@ const chillHop = () => {
       name: 'Departure',
       artist: 'Makzo',
       audio: 'https://mp3.chillhop.com/serve.php/?mp3=11771',
-      color: ['#485E9A', '#FEE87E'],
+      color: ['#606FAA', '##E8866E'],
       cover:
         'https://chillhop.com/wp-content/uploads/2020/11/f78c39b4bb6313ddd0354bef896c591bfb490ff8.jpg',
     },
@@ -74,7 +74,7 @@ const chillHop = () => {
       name: 'Vibe Vibe',
       artist: 'Moods, Yasper',
       audio: 'https://mp3.chillhop.com/serve.php/?mp3=10002',
-      color: ['#6E3A25', '#CCEEF8'],
+      color: ['#6E3A25', '#C6724B'],
       cover:
         'https://chillhop.com/wp-content/uploads/2020/08/7ba352cafecae63aa3f09a52e125ea615d2c1f9b.jpg',
     },
@@ -85,7 +85,7 @@ const chillHop = () => {
       name: 'fiveyearsago',
       artist: 'Psalm Trees',
       audio: 'https://mp3.chillhop.com/serve.php/?mp3=9021',
-      color: ['#6E3A25', '#CCEEF8'],
+      color: ['#6E3A25', '#C6724B'],
       cover:
         'https://chillhop.com/wp-content/uploads/2020/08/7ba352cafecae63aa3f09a52e125ea615d2c1f9b.jpg',
     },
@@ -96,7 +96,7 @@ const chillHop = () => {
       name: 'Last Night',
       artist: 'Philanthrope, goosetaf, Anbuu, Lead Major',
       audio: 'https://mp3.chillhop.com/serve.php/?mp3=9401',
-      color: ['#6E3A25', '#CCEEF8'],
+      color: ['#6E3A25', '#C6724B'],
       cover:
         'https://chillhop.com/wp-content/uploads/2020/08/7ba352cafecae63aa3f09a52e125ea615d2c1f9b.jpg',
     },

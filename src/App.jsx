@@ -16,11 +16,17 @@ function App() {
   const [songInfo, setSongInfo] = useState({
     currentTime: 0,
     duration: 0,
+    animationPercentage: 0,
   });
 
   //Event Handlers
   const timeUpdateHandler = ({ target: { currentTime, duration } }) => {
-    setSongInfo({ currentTime, duration });
+    setSongInfo({
+      ...songInfo,
+      currentTime,
+      duration,
+      animationPercentage: Math.round((currentTime / duration) * 100),
+    });
   };
 
   return (

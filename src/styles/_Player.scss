@@ -1,22 +1,61 @@
 .player {
   min-height: 20vh;
+
+  margin-top: 1rem;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .time-control {
   width: 50%;
   display: flex;
+  justify-content: center;
+  align-items: center;
 
   input {
+    cursor: pointer;
+    outline: none;
+
     width: 100%;
-    padding: 1rem 0;
+    background: transparent;
+
+    -webkit-appearance: none;
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .track {
+    width: 100%;
+    height: 1rem;
+    border-radius: 1rem;
+
+    position: relative;
+    overflow: hidden;
+
+    box-shadow: 2px 2px 5px gray;
+
+    .animate-track {
+      background: rgb(190, 190, 190);
+
+      width: 100%;
+      height: 100%;
+
+      pointer-events: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   }
 
   p {
-    padding: 1rem;
+    padding: 0 1rem;
   }
 }
 
@@ -29,5 +68,6 @@
 
   svg {
     cursor: pointer;
+    color: rgb(15, 15, 15);
   }
 }

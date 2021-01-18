@@ -14,7 +14,10 @@ const Player = ({
   setSongs,
   songInfo,
   setSongInfo,
-  currentSong: { id },
+  currentSong: {
+    id,
+    color: [color1, color2],
+  },
   setCurrentSong,
   isPlaying,
   setIsPlaying,
@@ -34,7 +37,11 @@ const Player = ({
 
   const sliderHandler = ({ target: { value } }) => {
     audioRef.current.currentTime = value;
-    setSongInfo({ currentTime: value, duration });
+    setSongInfo({
+      ...songInfo,
+      currentTime: value,
+      animationPercentage: Math.round((value / duration) * 100),
+    });
   };
 
   const skipTrackHandler = (dir) => {
@@ -62,20 +69,34 @@ const Player = ({
   };
 
   // Variables
-  const { currentTime, duration } = songInfo;
+  const { currentTime, duration, animationPercentage } = songInfo;
+
+  //Styles
+  const trackAnim = {
+    transform: `translateX(${animationPercentage}%)`,
+  };
 
   return (
     <div className='player'>
       <div className='time-control'>
         <p>{timeStampBuilder(currentTime || 0)}</p>
 
-        <input
-          type='range'
-          min='0'
-          max={duration || 0}
-          value={currentTime}
-          onChange={sliderHandler}
-        />
+        <div
+          style={{
+            background: `linear-gradient(45deg, ${color1}, ${color2})`,
+          }}
+          className='track'
+        >
+          <input
+            type='range'
+            min='0'
+            max={duration || 0}
+            value={currentTime}
+            onChange={sliderHandler}
+          />
+
+          <div style={trackAnim} className='animate-track'></div>
+        </div>
 
         <p>{timeStampBuilder(duration || 0)}</p>
       </div>
