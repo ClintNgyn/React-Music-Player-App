@@ -4,7 +4,7 @@ const chillHop = () => {
   return [
     {
       id: uuidv4(),
-      isActive: true,
+      isActive: false,
       name: 'Oasis',
       artist: 'Makzo',
       audio: 'https://mp3.chillhop.com/serve.php/?mp3=11768',
@@ -125,4 +125,16 @@ const chillHop = () => {
   ];
 };
 
-export default chillHop;
+// Shuffle Array
+const shuffle = (arr) => {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+
+  arr[0].isActive = true;
+
+  return arr;
+};
+
+export default shuffle(chillHop());

@@ -7,12 +7,13 @@ import data from './util';
 
 function App() {
   // State
-  const [songs, setSongs] = useState(data());
-  const [currentSong, setCurrrentSong] = useState(songs[0]);
+  const [songs, setSongs] = useState(data);
+  const [currentSong, setCurrentSong] = useState(songs[0]);
   const [isPlaying, setIsPlaying] = useState(false);
 
   return (
     <div>
+      {/* {console.log(currentSong)} */}
       <Song currentSong={currentSong} />
 
       <Player
@@ -21,7 +22,7 @@ function App() {
         setIsPlaying={setIsPlaying}
       />
 
-      <Library songs={songs} />
+      <Library songs={songs} setCurrentSong={setCurrentSong} />
     </div>
   );
 }
