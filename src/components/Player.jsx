@@ -13,10 +13,8 @@ const Player = ({
   isPlaying,
   setIsPlaying,
 }) => {
-  // State
-
   // Functions
-  const timeBuilder = (time) => {
+  const timeStampBuilder = (time) => {
     return `${Math.floor(time / 60)}:${('0' + Math.floor(time % 60)).slice(
       -2
     )}`;
@@ -44,17 +42,17 @@ const Player = ({
   return (
     <div className='player'>
       <div className='time-control'>
-        <p>{timeBuilder(currentTime)}</p>
+        <p>{timeStampBuilder(currentTime || 0)}</p>
 
         <input
           type='range'
           min='0'
-          max={duration}
+          max={duration || 0}
           value={currentTime}
           onChange={sliderHandler}
         />
 
-        <p>{timeBuilder(duration)}</p>
+        <p>{timeStampBuilder(duration || 0)}</p>
       </div>
 
       <div className='play-control'>
