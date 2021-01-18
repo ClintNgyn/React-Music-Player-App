@@ -3,7 +3,7 @@ import { useState, useRef } from 'react';
 import './styles/App.scss';
 
 import { Song, Player, Library, Nav } from './components';
-import data from './util';
+import data from './data';
 
 function App() {
   const audioRef = useRef(null);

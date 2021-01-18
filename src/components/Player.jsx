@@ -1,3 +1,5 @@
+import { playAudio } from '../util';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faPlay,
@@ -54,6 +56,9 @@ const Player = ({
         };
       })
     );
+
+    //Wait for audio to load
+    playAudio(isPlaying, audioRef);
   };
 
   // Variables
