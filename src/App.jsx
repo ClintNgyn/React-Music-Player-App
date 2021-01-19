@@ -29,6 +29,28 @@ function App() {
     });
   };
 
+  const songEndHandler = async () => {
+    const nextIdx =
+      (songs.findIndex((song) => song.id === currentSong.id) + 1) %
+      songs.length;
+
+    // Set current song
+    await setCurrentSong(songs[nextIdx]);
+
+    // Set current song's active property
+    setSongs(
+      songs.map((song) => {
+        return {
+          ...song,
+          isActive: song.id === songs[nextIdx].id,
+        };
+      })
+    );
+
+    //Play audio
+    isPlaying && audioRef.current.play();
+  };
+
   return (
     <div>
       <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
@@ -63,6 +85,7 @@ function App() {
         src={currentSong.audio}
         ref={audioRef}
         onLoadedMetadata={timeUpdateHandler}
+        onEnded={songEndHandler}
         onTimeUpdate={timeUpdateHandler}
       ></audio>
     </div>

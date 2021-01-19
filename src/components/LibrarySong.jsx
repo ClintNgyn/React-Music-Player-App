@@ -1,5 +1,3 @@
-import { playAudio } from '../util';
-
 const LibrarySong = ({
   audioRef,
   song,
@@ -12,8 +10,8 @@ const LibrarySong = ({
   const { id, cover, name, artist, isActive } = song;
 
   // Events Handler
-  const songSelectHandler = () => {
-    setCurrentSong(song);
+  const songSelectHandler = async () => {
+    await setCurrentSong(song);
 
     //set active song highlight
     setSongs(() => {
@@ -22,8 +20,8 @@ const LibrarySong = ({
       });
     });
 
-    // Wait for audio to load
-    playAudio(isPlaying, audioRef);
+    //Play audio
+    isPlaying && audioRef.current.play();
   };
 
   return (

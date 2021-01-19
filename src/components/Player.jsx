@@ -1,5 +1,3 @@
-import { playAudio } from '../util';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faPlay,
@@ -44,7 +42,8 @@ const Player = ({
     });
   };
 
-  const skipTrackHandler = (dir) => {
+  const skipTrackHandler = async (dir) => {
+    // Get current song's index
     let currIdx = songs.findIndex((song) => song.id === id);
     currIdx =
       dir === 'back'
@@ -53,8 +52,10 @@ const Player = ({
           : currIdx - 1
         : (currIdx + 1) % songs.length;
 
-    setCurrentSong(songs[currIdx]);
+    // Set current song
+    await setCurrentSong(songs[currIdx]);
 
+    // Set current song's active property
     setSongs(
       songs.map((song) => {
         return {
@@ -64,8 +65,8 @@ const Player = ({
       })
     );
 
-    //Wait for audio to load
-    playAudio(isPlaying, audioRef);
+    //Play audio
+    isPlaying && audioRef.current.play();
   };
 
   // Variables
