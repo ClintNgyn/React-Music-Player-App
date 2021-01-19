@@ -67,7 +67,6 @@ function App() {
         setCurrentSong={setCurrentSong}
         isPlaying={isPlaying}
         setIsPlaying={setIsPlaying}
-        onClick={() => setLibraryStatus(false)}
       />
 
       <Library
@@ -78,7 +77,6 @@ function App() {
         isPlaying={isPlaying}
         libraryStatus={libraryStatus}
         setLibraryStatus={setLibraryStatus}
-        onClick={() => setLibraryStatus(false)}
       />
 
       <audio
