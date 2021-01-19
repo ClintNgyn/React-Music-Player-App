@@ -1,13 +1,14 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMusic } from '@fortawesome/free-solid-svg-icons';
+import { faBookOpen, faCompactDisc } from '@fortawesome/free-solid-svg-icons';
 
 const Nav = ({ libraryStatus, setLibraryStatus }) => {
   return (
     <nav>
-      <h1>Music Player</h1>
+      {/* <FontAwesomeIcon icon={faCompactDisc} /> */}
+      <h1>Music App</h1>
 
       <button onClick={() => setLibraryStatus(!libraryStatus)}>
-        Library <FontAwesomeIcon icon={faMusic} />
+        <FontAwesomeIcon icon={faBookOpen} />
       </button>
     </nav>
   );

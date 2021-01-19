@@ -19,7 +19,7 @@ nav {
     padding: 0.9rem;
 
     background: transparent;
-    border: 2px solid rgba(82, 82, 82, 0.87);
+    border: 2px solid rgba(82, 82, 82, 0.699);
     border-radius: 6px;
 
     box-shadow: 2px 2px 3px rgb(177, 177, 177);
@@ -27,7 +27,7 @@ nav {
     transition: all 0.3s ease-in-out;
 
     &:hover {
-      background: rgba(65, 65, 65, 0.87);
+      background: rgba(65, 65, 65, 0.699);
       color: #f4f4f4;
 
       transform: scale(1.05);
@@ -38,8 +38,14 @@ nav {
     }
 
     &:active {
-      transform: scale(1);
+      transform: scale(0.95);
       transition: 100ms ease;
+    }
+
+    &::before {
+      content: "Library";
+      // color: #000;
+      margin-right: 0.8rem;
     }
   }
 
@@ -60,6 +66,24 @@ nav {
     button {
       font-size: 1.2rem;
       padding: 1.1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  nav {
+    h1 {
+      font-size: 2rem;
+    }
+
+    button {
+      padding: 1rem;
+
+      &::before,
+      &::after {
+        content: "";
+        margin: 0.2rem;
+      }
     }
   }
 }

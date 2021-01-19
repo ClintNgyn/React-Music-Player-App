@@ -45,3 +45,20 @@
     }
   }
 }
+
+@media screen and (max-width: 500px) {
+  .song-container {
+    img {
+      width: 50%;
+    }
+
+    h2 {
+      margin-top: 1rem;
+      font-size: 2.2rem;
+    }
+
+    h3 {
+      font-size: 1.2rem;
+    }
+  }
+}
