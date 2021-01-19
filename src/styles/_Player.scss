@@ -55,12 +55,12 @@
   }
 
   p {
-    padding: 0 1rem;
+    padding: 0 1.4rem;
   }
 }
 
 .play-control {
-  width: 30%;
+  width: 40%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -69,5 +69,20 @@
   svg {
     cursor: pointer;
     color: rgb(15, 15, 15);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .time-control {
+    width: 80%;
+    height: 10rem;
+
+    p {
+      font-size: 1.3rem;
+    }
+  }
+
+  .play-control {
+    width: 60%;
   }
 }
