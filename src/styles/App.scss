@@ -24,6 +24,7 @@
 
 body {
   font-family: "Lato", sans-serif;
+  background: #f4f4f4;
 }
 
 h1,
@@ -36,6 +37,20 @@ h3,
 h4 {
   font-weight: 400;
   color: rgb(59, 59, 59);
+}
+
+.app {
+  transition: all 0.6s ease;
+}
+
+.library-active {
+  margin-left: 8%;
+}
+
+@media screen and (max-width: 1024px) {
+  .library-active {
+    margin-left: 0;
+  }
 }
 
 @import "./Player";

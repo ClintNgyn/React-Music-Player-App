@@ -1,16 +1,16 @@
 .player {
-  min-height: 20vh;
+  min-height: 25vh;
 
   margin-top: 1rem;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .time-control {
-  width: 50%;
+  width: 55%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,12 +55,12 @@
   }
 
   p {
-    padding: 0 1.4rem;
+    padding: 0 1.8rem;
   }
 }
 
 .play-control {
-  width: 40%;
+  width: 30%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -75,14 +75,23 @@
 @media screen and (max-width: 1024px) {
   .time-control {
     width: 80%;
-    height: 10rem;
 
     p {
-      font-size: 1.3rem;
+      font-size: 1.8rem;
+    }
+
+    .track,
+    input {
+      height: 1.5rem;
     }
   }
 
   .play-control {
     width: 60%;
+
+    svg {
+      font-size: 3rem;
+      color: rgb(15, 15, 15);
+    }
   }
 }

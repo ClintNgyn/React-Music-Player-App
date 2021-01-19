@@ -1,7 +1,7 @@
 .song-container {
-  min-height: 50vh;
+  min-height: 40vh;
 
-  margin-top: 1rem;
+  margin-top: 0.5rem;
 
   display: flex;
   flex-direction: column;
@@ -9,7 +9,7 @@
   justify-content: center;
 
   img {
-    width: 21%;
+    width: 20%;
     border-radius: 50%;
     box-shadow: 2px 2px 20px rgb(173, 173, 173);
   }

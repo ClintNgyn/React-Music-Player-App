@@ -1,12 +1,12 @@
 nav {
-  min-height: 13vh;
+  min-height: 10vh;
   padding: 0.5rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 
   h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #1b1b1b;
     text-shadow: 2px 2px 2px rgb(175, 175, 175);
   }
@@ -15,7 +15,8 @@ nav {
     cursor: pointer;
     outline: none;
 
-    padding: 0.7rem;
+    font-size: 1rem;
+    padding: 0.9rem;
 
     background: transparent;
     border: 2px solid rgba(82, 82, 82, 0.87);

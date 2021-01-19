@@ -8,7 +8,7 @@ const chillHop = () => {
       name: 'Oasis',
       artist: 'Makzo',
       audio: 'https://mp3.chillhop.com/serve.php/?mp3=11768',
-      color: ['#606FAA', '##E8866E'],
+      color: ['#385391', '#EE8D64'],
       cover:
         'https://chillhop.com/wp-content/uploads/2020/11/f78c39b4bb6313ddd0354bef896c591bfb490ff8.jpg',
     },
@@ -19,7 +19,7 @@ const chillHop = () => {
       name: 'Departure',
       artist: 'Makzo',
       audio: 'https://mp3.chillhop.com/serve.php/?mp3=11771',
-      color: ['#606FAA', '##E8866E'],
+      color: ['#385391', '#EE8D64'],
       cover:
         'https://chillhop.com/wp-content/uploads/2020/11/f78c39b4bb6313ddd0354bef896c591bfb490ff8.jpg',
     },
@@ -30,7 +30,7 @@ const chillHop = () => {
       name: 'The End',
       artist: 'Philanthrope, Fujitsu',
       audio: 'https://mp3.chillhop.com/serve.php/?mp3=8518',
-      color: ['#0A755B', '#5D99E4'],
+      color: ['#31368A', '#87D5F4'],
       cover:
         'https://chillhop.com/wp-content/uploads/2020/10/efaa848553d09b4d9fc0752844456e41b34de276.jpg',
     },
@@ -41,7 +41,7 @@ const chillHop = () => {
       name: 'this again..',
       artist: 'SwuM, quickly, quickly',
       audio: 'https://mp3.chillhop.com/serve.php/?mp3=8953',
-      color: ['#0A755B', '#5D99E4'],
+      color: ['#31368A', '#87D5F4'],
       cover:
         'https://chillhop.com/wp-content/uploads/2020/10/efaa848553d09b4d9fc0752844456e41b34de276.jpg',
     },
@@ -52,7 +52,7 @@ const chillHop = () => {
       name: 'Stay.',
       artist: 'SwuM',
       audio: 'https://mp3.chillhop.com/serve.php/?mp3=7998',
-      color: ['#0A755B', '#5D99E4'],
+      color: ['#31368A', '#87D5F4'],
       cover:
         'https://chillhop.com/wp-content/uploads/2020/10/efaa848553d09b4d9fc0752844456e41b34de276.jpg',
     },
@@ -63,7 +63,7 @@ const chillHop = () => {
       name: 'Collages',
       artist: 'Sleepy Fish',
       audio: 'https://mp3.chillhop.com/serve.php/?mp3=7985',
-      color: ['#035984', '#75BDCD'],
+      color: ['#31368A', '#87D5F4'],
       cover:
         'https://chillhop.com/wp-content/uploads/2020/07/cd6ad456b39b442e4d39e346c5f778df969326e6.jpg',
     },
